@@ -19,7 +19,16 @@
         "command": "treesense.helloWorld",
         "title": "Hello World"
       }
-    ]
+    ],
+    "configuration": {
+      "properties": {
+        "treesense.debug": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable debug logging in the TreeSense output channel."
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "pnpm run package",
