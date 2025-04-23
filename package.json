@@ -1,8 +1,10 @@
 {
   "name": "treesense",
   "displayName": "TreeSense",
+  "icon": "images/icon.png",
+  "publisher": "EduardRius",
   "description": "Adds IntelliSense, go-to-definition, hover info, and auto-completion for BehaviorTree.CPP XML tree definitions in VS Code.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "engines": {
     "vscode": "^1.50.0"
   },
