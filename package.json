@@ -6,6 +6,14 @@
   "engines": {
     "vscode": "^1.50.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<your-username>/treesense.git"
+  },
+  "bugs": {
+    "url": "https://github.com/<your-username>/treesense/issues"
+  },
+  "homepage": "https://github.com/<your-username>/treesense#readme",
   "categories": [
     "Other"
   ],
