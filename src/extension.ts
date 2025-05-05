@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 
+import {registerCompletionProvider} from './completion';
 import {registerDefinitionProvider} from './definition';
 import {registerHoverProvider} from './hover';
 import {indexWorkspaceTrees, removeFileFromIndex, updateIndexForFile} from './indexer';
@@ -24,6 +25,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   registerDefinitionProvider(context, treeIndex);
   registerHoverProvider(context, treeIndex);
+  registerCompletionProvider(context, treeIndex);
 
   vscode.languages.registerDocumentSymbolProvider(
       {scheme: 'file', language: 'xml'}, new BTSymbolProvider());
