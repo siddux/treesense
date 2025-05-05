@@ -13,9 +13,9 @@ export function registerCompletionProvider(context: vscode.ExtensionContext, tre
                     if (!prefixMatch) {
                         return;
                     }
-                    const already = prefixMatch[2]; // what’s inside the quotes so far
+                    const already = prefixMatch[2];
                     const base = prefixMatch[1];
-                    // Compute start of the text we want to replace
+
                     const quoteStart = line.indexOf('"', prefixMatch.index) + 1;
                     const replaceRange = new vscode.Range(
                         position.line,
@@ -32,9 +32,7 @@ export function registerCompletionProvider(context: vscode.ExtensionContext, tre
                                 id,
                                 vscode.CompletionItemKind.Value
                             );
-                            // Only insert the ID itself, VSCode keeps your existing quotes
                             item.insertText = id;
-                            // Tell VSCode which range to replace
                             item.range = replaceRange;
                             return item;
                         });
